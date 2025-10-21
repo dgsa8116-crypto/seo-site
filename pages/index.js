@@ -2,59 +2,64 @@ import Head from "next/head";
 
 export default function Links() {
   const siteUrl = "https://tntlinebotseemyeyes.online";
-  const title = "TNT Line Bot 導覽中心";
-  const description = "10 個 AI 工具與專案入口，整合智能應用與實例展示。";
+  const title = "不正常人類研究中心";
+  const description = "多個娛樂城入口，整合多個代理與相關資訊。";
 
-  const links = [
+  // 前 4 個：可點擊連結
+  const activeLinks = [
     {
-      title: "AI 視覺辨識",
-      description: "體驗即時影像識別與物件偵測。",
-      url: "https://example1.com",
+      title: "智能客服聯繫中心",
+      description: "體驗即時的客服服務。",
+      url: "https://line.me/R/ti/p/@bec168",
     },
     {
-      title: "語音助理",
-      description: "以自然語音與 AI 對話。",
-      url: "https://example2.com",
+      title: "becgame註冊地址",
+      description: "快速前往註冊頁面。",
+      url: "https://becgame88168.com/?uffr=dgsa001",
     },
     {
-      title: "AI 翻譯中心",
-      description: "快速翻譯文字、圖片與語音內容。",
-      url: "https://example3.com",
+      title: "天眼通真人百家預測程式試用",
+      description: "體驗百家樂預測工具。",
+      url: "https://line.me/R/ti/p/@622bugzl",
     },
     {
-      title: "資料視覺化",
-      description: "將數據轉換為互動式圖表。",
-      url: "https://example4.com",
+      title: "天眼通客服序號申請服務中心",
+      description: "點選即可申請使用。",
+      url: "https://line.me/R/ti/p/@564lzkqd",
+    },
+  ];
+
+  // 其他 6 個：圖片 + 解說
+  const infoBlocks = [
+    {
+      title: "AI 智能數據中心",
+      description: "展示 AI 模型訓練與監控架構。",
+      img: "/images/ai-center.jpg",
     },
     {
-      title: "智慧客服",
-      description: "部署自動客服系統，減少人工負擔。",
-      url: "https://example5.com",
+      title: "玩家行為分析",
+      description: "可視化玩家行為與互動軌跡。",
+      img: "/images/player-analysis.jpg",
     },
     {
-      title: "情緒分析",
-      description: "辨識使用者文字情緒，優化回應策略。",
-      url: "https://example6.com",
+      title: "預測引擎展示",
+      description: "AI 模型實時預測數據結果。",
+      img: "/images/predict-engine.jpg",
     },
     {
-      title: "AI 圖像生成",
-      description: "使用生成式 AI 創造圖片與藝術作品。",
-      url: "https://example7.com",
+      title: "系統安全防護牆",
+      description: "保障資料與流量安全的多層防護。",
+      img: "/images/security-wall.jpg",
     },
     {
-      title: "SEO 監測工具",
-      description: "追蹤搜尋排名與關鍵字表現。",
-      url: "https://example8.com",
+      title: "自動化管理平台",
+      description: "集中控制與維運監控系統。",
+      img: "/images/auto-console.jpg",
     },
     {
-      title: "智慧行銷助手",
-      description: "自動化社群與電子報投放策略。",
-      url: "https://example9.com",
-    },
-    {
-      title: "開發者文件中心",
-      description: "查看 API 與 SDK 教學文件。",
-      url: "https://example10.com",
+      title: "用戶介面展示",
+      description: "設計簡潔的操作介面與功能模組。",
+      img: "/images/ui-demo.jpg",
     },
   ];
 
@@ -63,7 +68,7 @@ export default function Links() {
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
-        <meta name="keywords" content="AI, Line Bot, 工具, 智能, SEO" />
+        <meta name="keywords" content="娛樂城, Line Bot, AI, 研究中心" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
         <meta property="og:url" content={siteUrl} />
@@ -82,16 +87,17 @@ export default function Links() {
         <h1 style={{ marginBottom: "10px" }}>{title}</h1>
         <p style={{ color: "#555", marginBottom: "40px" }}>{description}</p>
 
+        {/* 前四個：可點擊連結 */}
         <div
           style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
             gap: "20px",
             maxWidth: "1000px",
-            margin: "0 auto",
+            margin: "0 auto 60px",
           }}
         >
-          {links.map((link, index) => (
+          {activeLinks.map((link, index) => (
             <div
               key={index}
               style={{
@@ -128,8 +134,50 @@ export default function Links() {
           ))}
         </div>
 
+        {/* 後六個：圖片 + 解說 */}
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+            gap: "20px",
+            maxWidth: "1200px",
+            margin: "0 auto",
+          }}
+        >
+          {infoBlocks.map((item, index) => (
+            <div
+              key={index}
+              style={{
+                background: "#fff",
+                border: "1px solid #ddd",
+                borderRadius: "12px",
+                overflow: "hidden",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.05)",
+              }}
+            >
+              <img
+                src={item.img}
+                alt={item.title}
+                style={{
+                  width: "100%",
+                  height: "140px",
+                  objectFit: "cover",
+                }}
+              />
+              <div style={{ padding: "15px" }}>
+                <h3 style={{ fontSize: "16px", marginBottom: "8px" }}>
+                  {item.title}
+                </h3>
+                <p style={{ fontSize: "13px", color: "#666" }}>
+                  {item.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <footer style={{ marginTop: "60px", fontSize: "14px", color: "#777" }}>
-          <p>© {new Date().getFullYear()} TNT Line Bot - 導覽中心</p>
+          <p>© {new Date().getFullYear()} 不正常人類研究中心</p>
         </footer>
       </main>
     </>
