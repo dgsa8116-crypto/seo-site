@@ -6,9 +6,7 @@ module.exports = {
   exclude: ['/404'],
   outDir: 'out',
 
-  // ✅ 關閉舊版 routes-manifest 掃描
-  generateIndexSitemap: true,
-  autoLastmod: false,
+  // ✅ 禁用 routes-manifest 掃描（防止 Vercel 錯誤）
   transform: async (config, path) => {
     return {
       loc: path,
@@ -17,4 +15,5 @@ module.exports = {
       lastmod: new Date().toISOString(),
     };
   },
+  additionalPaths: async (config) => [],
 };
