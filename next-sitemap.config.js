@@ -4,6 +4,17 @@ module.exports = {
   generateRobotsTxt: true,
   sitemapSize: 7000,
   exclude: ['/404'],
-  // ✅ 新增這行讓 next-sitemap 自動找到新的輸出資料夾
   outDir: 'out',
+
+  // ✅ 關閉舊版 routes-manifest 掃描
+  generateIndexSitemap: true,
+  autoLastmod: false,
+  transform: async (config, path) => {
+    return {
+      loc: path,
+      changefreq: 'weekly',
+      priority: path === '/' ? 1.0 : 0.7,
+      lastmod: new Date().toISOString(),
+    };
+  },
 };

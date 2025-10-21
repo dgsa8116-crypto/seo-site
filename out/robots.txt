@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://tntlinebotseemyeyes.online
+
+# Sitemaps
+Sitemap: https://tntlinebotseemyeyes.online/sitemap.xml
