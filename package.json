@@ -2,17 +2,15 @@
   "name": "seo-site",
   "version": "1.0.0",
   "private": true,
-"scripts": {
-  "dev": "next dev",
-  "build": "next build && next-sitemap",
-  "start": "next start"
-}
-
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build && next-sitemap",
+    "start": "next start"
+  },
   "dependencies": {
     "next": "latest",
-    "next-sitemap": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "next-sitemap": "latest"
   }
 }
