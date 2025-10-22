@@ -7,8 +7,12 @@ const seoPath = path.join(process.cwd(), "data", "seo.json");
 async function getTrendsTW() {
   const r = await fetch("https://trends.google.com/trends/api/dailytrends?geo=TW");
   const text = await r.text();
-  const json = JSON.parse(text.replace(/^\)]}'\n?/, ""));
-  return json?.default?.trendingSearchesDays?.[0]?.trendingSearches?.map(t => t.title.query) || [];
+  try {
+    const json = JSON.parse(text.replace(/^\)]}'\n?/, ""));
+    return json?.default?.trendingSearchesDays?.[0]?.trendingSearches?.map(t => t.title.query) || [];
+  } catch {
+    return [];
+  }
 }
 
 try {

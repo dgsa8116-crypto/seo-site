@@ -13,3 +13,5 @@ h1,h2,h3{margin:0 0 8px 0}
 p{margin:0 0 12px 0;line-height:1.6}
 .badge{display:inline-block;padding:2px 8px;font-size:12px;border:1px solid rgba(255,255,255,.3);border-radius:999px;margin-top:8px}
 a.small-link{color:#66aaff;font-size:14px;text-decoration:none}
+.header{margin-bottom:28px}
+.subtitle{opacity:.9}

@@ -1,6 +1,6 @@
 {
   "name": "seo-site-pro-tw",
-  "version": "1.0.4",
+  "version": "2.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -10,7 +10,7 @@
     "ping-sitemap": "node scripts/ping-sitemap.mjs",
     "build": "npm run generate-meta && npm run compress-images && next build && npm run sitemap && npm run ping-sitemap",
     "sitemap": "next-sitemap --config next-sitemap.config.cjs",
-    "start": "next start"
+    "start": "next start -p 3000"
   },
   "dependencies": {
     "next": "15.5.6",
