@@ -10,7 +10,7 @@ export default async function handler(req, res) {
     if (words.length) {
       const seoPath = path.join(process.cwd(), "data", "seo.json");
       const seo = JSON.parse(fs.readFileSync(seoPath, "utf8"));
-      seo.keywords = Array.from(new Set([...(seo.keywords || []), ...words])).slice(0, 20);
+      seo.keywords = Array.from(new Set([...(seo.keywords || []), ...words])).slice(0, 25);
       seo.description = `目前熱門搜尋詞（TW）：${words.slice(0, 5).join("、")}。`;
       try { fs.writeFileSync(seoPath, JSON.stringify(seo, null, 2), "utf8"); } catch {}
     }
