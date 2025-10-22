@@ -1,56 +1,56 @@
 {
   "brand": "不正常人類研究中心",
   "hero": {
-    "title": "策略、設計、增長",
-    "subtitle": "以數據驅動的行銷與產品設計，帶動品牌成長。",
+    "title": "註冊BEC",
+    "subtitle": "先有註冊才有後續。",
     "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1600&auto=format&fit=crop",
     "cta": {
-      "label": "立即諮詢",
-      "href": "https://line.me/R/ti/p/@bec168"
+      "label": "立即註冊",
+      "href": "https://becgame88168.com/?uffr=dgsa001"
     }
   },
   "services": {
-    "title": "核心服務",
+    "title": "核心推薦",
     "items": [
       {
-        "title": "品牌策略與內容",
-        "description": "策略工作坊、品牌敘事、內容規劃與社群營運。",
+        "title": "智能客服中心",
+        "description": "最溫馨的客服服務，減少不必要的損失。",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
+        "link": "https://line.me/R/ti/p/@bec168",
+        "badge": "LINE"
+      },
+      {
+        "title": "LINEBOT最猛預測程式-天眼通",
+        "description": "AI學習模組最豐富的排組組合。",
+        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
+        "link": "https://line.me/R/ti/p/@564lzkqd"
+      },
+      {
+        "title": "天眼通申請序號",
+        "description": "跨渠道整合，決策效率大幅提升。",
+        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop",
+        "link": "https://line.me/R/ti/p/@622bugzl",
+        "badge": "DEMO"
+      }
+    ]
+  },
+  "portfolio": {
+    "title": "幹話連篇",
+    "items": [
+      {
+        "title": "最簡單的介面最優質的服務",
+        "description": "往後餘生請交給我們。",
         "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        "title": "SEO 與成長實驗",
-        "description": "技術 SEO、語意內容、A/B 實驗與成效追蹤。",
+        "title": "最優質的平台服務",
+        "description": "技術 代理 客服 都是最優質的。",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
       },
       {
         "title": "產品設計與開發",
         "description": "從雛型到上線，設計系統與高品質前端。",
         "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1200&auto=format&fit=crop"
-      }
-    ]
-  },
-  "portfolio": {
-    "title": "精選案例",
-    "items": [
-      {
-        "title": "智能客服中心",
-        "description": "自動化客戶旅程，降低 35% 人工成本。",
-        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1200&auto=format&fit=crop",
-        "link": "https://line.me/R/ti/p/@bec168",
-        "badge": "LINE"
-      },
-      {
-        "title": "SEO 成長專案",
-        "description": "三個月關鍵字進入前十名，流量翻倍。",
-        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=1200&auto=format&fit=crop",
-        "link": "https://becgame88168.com/?uffr=dgsa001"
-      },
-      {
-        "title": "資料儀表板",
-        "description": "跨渠道整合，決策效率大幅提升。",
-        "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop",
-        "link": "https://line.me/R/ti/p/@622bugzl",
-        "badge": "DEMO"
       }
     ]
   }
