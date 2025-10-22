@@ -1,21 +1,31 @@
 import Head from "next/head";
 export default function SEO({ meta }){
-  const { title, description, keywords, url, image, jsonLd } = meta || {};
-  return(<Head>
-    <title>{title}</title>
-    {description ? <meta name="description" content={description} /> : null}
-    {keywords?.length ? <meta name="keywords" content={keywords.join(', ')} /> : null}
-    <meta property="og:type" content="website" />
-    {title ? <meta property="og:title" content={title} /> : null}
-    {description ? <meta property="og:description" content={description} /> : null}
-    {url ? <meta property="og:url" content={url} /> : null}
-    {image ? <meta property="og:image" content={image} /> : null}
-    <meta property="og:locale" content="zh_TW" />
-    <meta name="twitter:card" content="summary_large_image" />
-    {title ? <meta name="twitter:title" content={title} /> : null}
-    {description ? <meta name="twitter:description" content={description} /> : null}
-    {image ? <meta name="twitter:image" content={image} /> : null}
-    {url ? <link rel="canonical" href={url} /> : null}
-    {jsonLd ? <script type="application/ld+json" dangerouslySetInnerHTML={{__html: JSON.stringify(jsonLd)}} /> : null}
-  </Head>);
+  const {
+    title = "不正常人類研究中心",
+    description = "AI / 科技導覽站，賽博霓虹風展示。",
+    url = "https://tntlinebotseemyeyes.online",
+    image = "/og-image.png"
+  } = meta || {};
+  const img = image?.startsWith("http") ? image : url + image;
+  return (
+    <Head>
+      <title>{title}</title>
+      <meta name="description" content={description} />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <meta name="theme-color" content="#00e5ff" />
+      <link rel="canonical" href={url} />
+      {/* OG */}
+      <meta property="og:type" content="website" />
+      <meta property="og:title" content={title} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={url} />
+      <meta property="og:image" content={img} />
+      {/* Twitter */}
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={title} />
+      <meta name="twitter:description" content={description} />
+      <meta name="twitter:image" content={img} />
+      <link rel="icon" href="/favicon.ico" />
+    </Head>
+  );
 }

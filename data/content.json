@@ -10,7 +10,7 @@
     }
   },
   "services": {
-    "title": "核心推薦",
+    "title": "其餘服務業務",
     "items": [
       {
         "title": "智能客服中心",
@@ -35,7 +35,7 @@
     ]
   },
   "portfolio": {
-    "title": "幹話連篇",
+    "title": "核心推薦",
     "items": [
       {
         "title": "最簡單的介面最優質的服務",
@@ -43,8 +43,8 @@
         "image": "https://images.unsplash.com/photo-1492724441997-5dc865305da7?q=80&w=1200&auto=format&fit=crop"
       },
       {
-        "title": "最優質的平台服務",
-        "description": "技術 代理 客服 都是最優質的。",
+        "title": "最優質的學習服務",
+        "description": "技術 SEO、語意內容、A/B 實驗與成效追蹤。",
         "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop"
       },
       {
