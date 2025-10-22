@@ -8,16 +8,5 @@
     "智能客服"
   ],
   "image": "/uploads/og-image.jpg",
-  "url": "https://tntlinebotseemyeyes.online",
-  "jsonLd": {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "不正常人類研究中心",
-    "url": "https://tntlinebotseemyeyes.online",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://tntlinebotseemyeyes.online/?s={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
+  "url": "https://tntlinebotseemyeyes.online"
 }

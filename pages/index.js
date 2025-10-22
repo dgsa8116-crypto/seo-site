@@ -16,11 +16,9 @@ export default function Home({ data, meta }) {
   return (
     <>
       <SEO meta={meta} />
-
       <main className="container">
         <h1 style={{ marginBottom: 8 }}>{data.brand}</h1>
         <p style={{ marginBottom: 28, opacity: .9 }}>{data.tagline}</p>
-
         <div className="grid grid-4" style={{ marginBottom: 40 }}>
           {data.links.map((link, i) => (
             <div className="card" key={i}>
@@ -35,7 +33,6 @@ export default function Home({ data, meta }) {
             </div>
           ))}
         </div>
-
         <div className="grid grid-4">
           {data.blocks.map((b, i) => (
             <div className="card" key={i}>
@@ -47,7 +44,6 @@ export default function Home({ data, meta }) {
             </div>
           ))}
         </div>
-
         <div className="footer">
           <p>© {new Date().getFullYear()} 不正常人類研究中心</p>
         </div>
