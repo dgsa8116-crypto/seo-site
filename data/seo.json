@@ -1,0 +1,23 @@
+{
+  "title": "TNT Line Bot - 不正常人類研究中心",
+  "description": "入口聚合與 AI 專案展示。每日自動更新關鍵字以符合 Google 熱搜。",
+  "keywords": [
+    "AI",
+    "Line Bot",
+    "研究中心",
+    "智能客服"
+  ],
+  "image": "/uploads/og-image.jpg",
+  "url": "https://tntlinebotseemyeyes.online",
+  "jsonLd": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "不正常人類研究中心",
+    "url": "https://tntlinebotseemyeyes.online",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://tntlinebotseemyeyes.online/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+}
