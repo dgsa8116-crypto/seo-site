@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { useState } from "react";
 import SEO from "@/components/SEO";
 
 export async function getStaticProps() {
@@ -13,12 +14,16 @@ export async function getStaticProps() {
 }
 
 export default function Home({ data, meta }) {
+  const [preview, setPreview] = useState(null);
+
   return (
     <>
       <SEO meta={meta} />
+
       <main className="container">
         <h1 style={{ marginBottom: 8 }}>{data.brand}</h1>
         <p style={{ marginBottom: 28, opacity: .9 }}>{data.tagline}</p>
+
         <div className="grid grid-4" style={{ marginBottom: 40 }}>
           {data.links.map((link, i) => (
             <div className="card" key={i}>
@@ -33,10 +38,17 @@ export default function Home({ data, meta }) {
             </div>
           ))}
         </div>
+
         <div className="grid grid-4">
           {data.blocks.map((b, i) => (
             <div className="card" key={i}>
-              <img className="resp" src={b.img} alt={b.title} />
+              <img
+                className="resp"
+                src={b.img}
+                alt={b.title}
+                style={{ cursor: "zoom-in" }}
+                onClick={() => setPreview(b.img)}
+              />
               <div className="inner">
                 <h3 style={{ fontSize: 16 }}>{b.title}</h3>
                 <p style={{ fontSize: 13, opacity: .9 }}>{b.description}</p>
@@ -44,10 +56,38 @@ export default function Home({ data, meta }) {
             </div>
           ))}
         </div>
+
         <div className="footer">
           <p>© {new Date().getFullYear()} 不正常人類研究中心</p>
         </div>
       </main>
+
+      {preview && (
+        <div
+          onClick={() => setPreview(null)}
+          style={{
+            position: "fixed",
+            top: 0, left: 0, right: 0, bottom: 0,
+            background: "rgba(0,0,0,0.85)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 9999,
+          }}
+        >
+          <img
+            src={preview}
+            alt="preview"
+            style={{
+              maxWidth: "90%",
+              maxHeight: "90%",
+              borderRadius: "12px",
+              boxShadow: "0 0 20px rgba(0,0,0,0.5)",
+              objectFit: "contain",
+            }}
+          />
+        </div>
+      )}
     </>
   );
 }
