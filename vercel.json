@@ -1,5 +1,8 @@
 {
-  "buildCommand": "npm run build",
-  "outputDirectory": "out",
-  "framework": null
+  "crons": [
+    {
+      "path": "/api/refresh-seo",
+      "schedule": "0 8 * * *"
+    }
+  ]
 }

@@ -1,7 +1,7 @@
 {
   "siteUrl": "https://tntlinebotseemyeyes.online",
   "brand": "不正常人類研究中心",
-  "tagline": "多個娛樂相關入口。",
+  "tagline": "多個入口聚合，支援每日 SEO 動態關鍵字。",
   "links": [
     {
       "title": "智能客服聯繫中心",
@@ -29,11 +29,35 @@
     }
   ],
   "blocks": [
-    { "title": "AI 智能數據中心", "description": "展示 AI 模型訓練與監控架構。", "img": "/uploads/ai-center.jpg" },
-    { "title": "玩家行為分析", "description": "可視化玩家行為與互動軌跡。", "img": "/uploads/player-analysis.jpg" },
-    { "title": "預測引擎展示", "description": "AI 模型實時預測數據結果。", "img": "/uploads/predict-engine.jpg" },
-    { "title": "系統安全防護牆", "description": "保障資料與流量安全的多層防護。", "img": "/uploads/security-wall.jpg" },
-    { "title": "自動化管理平台", "description": "集中控制與維運監控系統。", "img": "/uploads/auto-console.jpg" },
-    { "title": "用戶介面展示", "description": "設計簡潔的操作介面與功能模組。", "img": "/uploads/ui-demo.jpg" }
+    {
+      "img": "https://picsum.photos/1200/800?1",
+      "title": "AI 智能數據中心",
+      "description": "展示 AI 模型訓練與監控架構。"
+    },
+    {
+      "img": "https://picsum.photos/1200/800?2",
+      "title": "玩家行為分析",
+      "description": "可視化玩家行為與互動軌跡。"
+    },
+    {
+      "img": "https://picsum.photos/1200/800?3",
+      "title": "預測引擎展示",
+      "description": "AI 模型實時預測數據結果。"
+    },
+    {
+      "img": "https://picsum.photos/1200/800?4",
+      "title": "系統安全防護牆",
+      "description": "保障資料與流量安全的多層防護。"
+    },
+    {
+      "img": "https://picsum.photos/1200/800?5",
+      "title": "自動化管理平台",
+      "description": "集中控制與維運監控系統。"
+    },
+    {
+      "img": "https://picsum.photos/1200/800?6",
+      "title": "用戶介面展示",
+      "description": "設計簡潔的操作介面與功能模組。"
+    }
   ]
 }

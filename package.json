@@ -1,16 +1,22 @@
 {
-  "name": "seo-site-pro",
+  "name": "seo-site-pro-ultimate",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/generate-meta.mjs && next build && next-sitemap",
+    "generate-meta": "node scripts/generate-meta.mjs",
+    "compress-images": "node scripts/compress-images.mjs",
+    "ping-sitemap": "node scripts/ping-sitemap.mjs",
+    "build": "npm run generate-meta && npm run compress-images && next build && next-sitemap && npm run ping-sitemap",
     "start": "next start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "latest",
-    "react-dom": "latest",
-    "next-sitemap": "latest"
+    "next": "15.5.6",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "node-fetch": "^3.3.2",
+    "next-sitemap": "latest",
+    "sharp": "^0.33.4"
   }
 }

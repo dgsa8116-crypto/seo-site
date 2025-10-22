@@ -1,5 +1,4 @@
 import Head from "next/head";
-
 export default function SEO({ meta }) {
   const { title, description, keywords, url, image, jsonLd } = meta;
   return (

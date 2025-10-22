@@ -1,29 +1,27 @@
-import fs from 'fs';
-import path from 'path';
+import fs from "fs";
+import path from "path";
+import fetch from "node-fetch";
 
-const root = process.cwd();
-const seoPath = path.join(root, 'data', 'seo.json');
-const trendsPath = path.join(root, 'data', 'trends.json');
+const seoPath = path.join(process.cwd(), "data", "seo.json");
 
-const seo = JSON.parse(fs.readFileSync(seoPath, 'utf8'));
-let trends = [];
-
-if (fs.existsSync(trendsPath)) {
+async function getGoogleTrends() {
   try {
-    const t = JSON.parse(fs.readFileSync(trendsPath, 'utf8'));
-    trends = (t.keywords || []).slice(0, 10);
-  } catch {
-    console.warn('[generate-meta] trends.json parse failed, skip.');
+    const res = await fetch("https://trends.google.com/trends/hottrends/visualize/internal/data/en");
+    const json = await res.json();
+    return json.flatMap(region => region.trends).slice(0, 10).map(t => t.title.trim());
+  } catch (err) {
+    console.error("[generate-meta] failed to fetch trends", err);
+    return [];
   }
 }
 
+const trends = await getGoogleTrends();
 if (trends.length) {
-  const base = (seo.keywords || []);
-  const merged = Array.from(new Set([...trends, ...base])).slice(0, 20);
-  seo.keywords = merged;
-  seo.description = (seo.description?.split('｜')[0] || seo.description) + `｜今日關鍵：${trends[0]}`;
-  fs.writeFileSync(seoPath, JSON.stringify(seo, null, 2), 'utf8');
-  console.log('[generate-meta] keywords updated from trends:', trends.slice(0,5).join(', '));
+  const seo = JSON.parse(fs.readFileSync(seoPath, "utf8"));
+  seo.keywords = Array.from(new Set([...(seo.keywords || []), ...trends])).slice(0, 20);
+  seo.description = `目前熱門搜尋詞：${trends.slice(0, 5).join("、")}。`;
+  fs.writeFileSync(seoPath, JSON.stringify(seo, null, 2), "utf8");
+  console.log("[generate-meta] updated", trends.slice(0,5).join(", "));
 } else {
-  console.log('[generate-meta] no trends found, keep existing seo.json');
+  console.log("[generate-meta] no trends found");
 }
