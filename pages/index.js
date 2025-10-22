@@ -29,9 +29,7 @@ export default function Home({ data, meta }) {
                 <h2 style={{ fontSize: 18 }}>{link.title}</h2>
                 <p style={{ fontSize: 14, opacity: .9 }}>{link.description}</p>
                 <div style={{ display: "flex", alignItems: "center", gap: "8px", marginTop: "10px" }}>
-                  {link.url ? (
-                    <a className="small-link" href={link.url} target="_blank" rel="noopener noreferrer">前往</a>
-                  ) : null}
+                  {link.url ? (<a className="small-link" href={link.url} target="_blank" rel="noopener noreferrer">前往</a>) : null}
                   {link.badge ? (<span className="badge">{link.badge}</span>) : null}
                 </div>
               </div>

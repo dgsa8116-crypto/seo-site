@@ -1,2 +1,10 @@
-import '@/styles/globals.css'
-export default function App({Component,pageProps}){return(<body className='bg'><Component {...pageProps}/></body>)}
+import { useEffect } from 'react';
+import '@/styles/globals.css';
+
+export default function App({ Component, pageProps }){
+  useEffect(() => {
+    document.body.classList.add('bg');
+    return () => document.body.classList.remove('bg');
+  }, []);
+  return <Component {...pageProps} />;
+}
