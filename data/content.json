@@ -1,14 +1,39 @@
 {
   "siteUrl": "https://tntlinebotseemyeyes.online",
   "brand": "不正常人類研究中心",
-  "tagline": "多個入口聚合，支援每日 SEO 動態關鍵字。",
+  "tagline": "多個娛樂相關入口。",
   "links": [
     {
       "title": "智能客服聯繫中心",
       "description": "體驗即時的客服服務。",
       "url": "https://line.me/R/ti/p/@bec168",
       "badge": "加入LINE"
+    },
+    {
+      "title": "becgame註冊地址",
+      "description": "快速前往註冊頁面。",
+      "url": "https://becgame88168.com/?uffr=dgsa001",
+      "badge": "註冊"
+    },
+    {
+      "title": "天眼通真人百家預測程式試用",
+      "description": "體驗百家樂預測工具。",
+      "url": "https://line.me/R/ti/p/@622bugzl",
+      "badge": "試用"
+    },
+    {
+      "title": "天眼通客服序號申請服務中心",
+      "description": "點選即可申請使用。",
+      "url": "https://line.me/R/ti/p/@564lzkqd",
+      "badge": "申請序號"
     }
   ],
-  "blocks": []
+  "blocks": [
+    { "title": "AI 智能數據中心", "description": "展示 AI 模型訓練與監控架構。", "img": "/uploads/ai-center.jpg" },
+    { "title": "玩家行為分析", "description": "可視化玩家行為與互動軌跡。", "img": "/uploads/player-analysis.jpg" },
+    { "title": "預測引擎展示", "description": "AI 模型實時預測數據結果。", "img": "/uploads/predict-engine.jpg" },
+    { "title": "系統安全防護牆", "description": "保障資料與流量安全的多層防護。", "img": "/uploads/security-wall.jpg" },
+    { "title": "自動化管理平台", "description": "集中控制與維運監控系統。", "img": "/uploads/auto-console.jpg" },
+    { "title": "用戶介面展示", "description": "設計簡潔的操作介面與功能模組。", "img": "/uploads/ui-demo.jpg" }
+  ]
 }
