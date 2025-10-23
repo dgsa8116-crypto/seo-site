@@ -1,8 +1,8 @@
 import Head from "next/head";
 export default function SEO({ meta }){
   const {
-    title = "不正常人類研究中心",
-    description = "AI / 科技導覽站，賽博霓虹風展示。",
+    title = "天眼通III不正常人類研究中心｜娛樂交流｜百家樂學術研究｜AI預測程式",
+    description = "獨家技術｜絕非市面上氾濫計算機算法，帶入AI學習演算法｜多種判定引擎｜給你滿滿的高優質體驗",
     url = "https://tntlinebotseemyeyes.online",
     image = "/og-image.png"
   } = meta || {};
